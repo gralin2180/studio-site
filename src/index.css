@@ -1,0 +1,117 @@
+:root {
+  /* Classy stone paper — muted, never pure white */
+  --bg: #e2ddd6;
+  --bg-deep: #d5cfc7;
+  --ink: #1a1c1a;
+  --ink-soft: #4a4f4a;
+  --muted: #6b716b;
+  --line: rgba(26, 28, 26, 0.1);
+  --surface: #ebe7e1;
+  --surface-strong: #f3f0eb;
+  --accent: #1e3d34;
+  --accent-mid: #2f5c4e;
+  --accent-hot: #9aab7a;
+  --brass: #a8946a;
+  --emboss-hi: rgba(255, 255, 255, 0.55);
+  --emboss-lo: rgba(26, 28, 26, 0.08);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+
+  --max: 1080px;
+  --radius: 3px;
+
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 0% 0%, rgba(158, 171, 122, 0.12), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 100% 10%, rgba(30, 61, 52, 0.08), transparent 48%),
+    linear-gradient(175deg, #ebe6df 0%, var(--bg) 45%, #d8d2ca 100%);
+  background-attachment: fixed;
+}
+
+/* Refined emboss — fabric grain + soft plate press */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -3px 8px rgba(26, 28, 26, 0.06);
+  background: radial-gradient(
+    ellipse 110% 90% at 50% 20%,
+    transparent 50%,
+    rgba(26, 28, 26, 0.04) 100%
+  );
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--accent-mid);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+.btn {
+  font: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent);
+  color: #f4f1eb;
+}
