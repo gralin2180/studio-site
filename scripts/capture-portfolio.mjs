@@ -109,7 +109,7 @@ async function main() {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 900 },
     deviceScaleFactor: 1.5,
-    userAgent: "TillcraftPortfolioCapture/1.0",
+    userAgent: "TilkraftPortfolioCapture/1.0",
   });
   const page = await context.newPage();
 

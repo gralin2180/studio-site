@@ -29,4 +29,7 @@ dist-ssr
 !.env.example
 .ms-playwright
 public/work/_probe-*.png
+public/work/_preview-*.png
+public/work/_studio-landing.png
+nul.css
 
