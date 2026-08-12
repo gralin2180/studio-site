@@ -1,8 +1,8 @@
-# Publish Tilkraft Studios to GitHub and invite a collaborator.
+# Publish Studio Site to GitHub and invite a collaborator.
 # Prerequisite: gh auth login  (or publish via GitHub Desktop first, then run invite-only)
 
 param(
-    [string]$Repo = "tilkraft-studios",
+    [string]$Repo = "studio-site",
     [string]$InviteEmail = "y.faustina@op.iitg.ac.in",
     [ValidateSet("private", "public")]
     [string]$Visibility = "private"

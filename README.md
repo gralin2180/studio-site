@@ -1,4 +1,4 @@
-# Tilkraft Studios
+# Studio Site
 
 Fixed-price websites and custom apps for whoever needs them. Marketing site (Vite + React).
 
