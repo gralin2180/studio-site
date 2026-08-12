@@ -32,5 +32,5 @@ if (-not (git remote get-url origin 2>$null)) {
 
 Write-Host "Repository: https://github.com/$full" -ForegroundColor Green
 
-gh api "repos/$full/invitations" -f email=$InviteEmail -f permission=read
-Write-Host "Invitation sent to $InviteEmail (they must accept via email/GitHub)." -ForegroundColor Green
+gh api "repos/$full/invitations" -f email=$InviteEmail -f permission=push
+Write-Host "Invitation sent to $InviteEmail with write (edit) access — they must accept via email/GitHub." -ForegroundColor Green
