@@ -549,11 +549,12 @@ export default function App() {
       </header>
 
       <main id="top">
-        <section className="hero hero-solo" aria-label="Introduction">
-          <p className="hero-eyebrow">App &amp; web studio · fixed packages</p>
+        <section className="hero" aria-label="Introduction">
+          <div className="hero-stack">
+          <p className="hero-eyebrow">App &amp; web studio</p>
           <p className="brand-mark">
             {brand.name}
-            <em className="brand-studios">Studios</em>
+            <span className="brand-studios">Studios</span>
           </p>
           <h1>{brand.tagline}</h1>
           <p className="hero-lead">{brand.oneLiner}</p>
@@ -590,6 +591,7 @@ export default function App() {
               <strong>Quotes by scope</strong>
             </li>
           </ul>
+          </div>
         </section>
 
         <section id="packages">
