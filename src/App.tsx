@@ -549,7 +549,8 @@ export default function App() {
       </header>
 
       <main id="top">
-        <section className="hero hero-solo" aria-label="Introduction">
+        <section className="hero" aria-label="Introduction">
+          <div className="hero-stack">
           <p className="hero-eyebrow">App &amp; web studio</p>
           <p className="brand-mark">
             {brand.name}
@@ -590,6 +591,7 @@ export default function App() {
               <strong>Quotes by scope</strong>
             </li>
           </ul>
+          </div>
         </section>
 
         <section id="packages">
