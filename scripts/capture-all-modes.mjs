@@ -105,7 +105,7 @@ for (const mode of ["light", "dark"]) {
     const context = await browser.newContext({
       viewport: { width: vp.width, height: vp.height },
       deviceScaleFactor: vp.deviceScaleFactor,
-      userAgent: "TilkraftPortfolioCapture/1.0",
+      userAgent: "CodermanPortfolioCapture/1.0",
     });
     await seedTheme(context, mode);
     const page = await context.newPage();

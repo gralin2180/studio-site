@@ -51,7 +51,7 @@ const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({
   viewport: { width: 420, height: 900 },
   deviceScaleFactor: 2,
-  userAgent: "TilkraftPortfolioCapture/1.0",
+  userAgent: "CodermanPortfolioCapture/1.0",
 });
 await context.addInitScript(() => {
   localStorage.setItem("visual_theme_v2", "day");

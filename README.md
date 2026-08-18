@@ -17,4 +17,4 @@ No Supabase / env vars required for this site.
 
 ## Brand
 
-Source of truth: `src/brand.ts` (`Tilkraft Studios`, `tilkraft.com`, packages, portfolio links).
+Source of truth: `src/brand.ts` (`Coderman Studio`, `coderman.studio`, packages, portfolio links).

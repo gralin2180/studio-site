@@ -1,15 +1,16 @@
 /**
- * Brand + portfolio data for Tilkraft Studios marketing site.
+ * Brand + portfolio data for Coderman Studio marketing site.
  */
 export const brand = {
-  name: "Tilkraft",
-  legalName: "Tilkraft Studios",
-  domain: "tilkraft.com",
+  name: "Coderman",
+  studioWord: "Studio",
+  legalName: "Coderman Studio",
+  domain: "coderman.studio",
   tagline: "We build apps and sites — fixed packages, clear price.",
   oneLiner:
     "Tell us what you need. We set the scope, quote a clear estimate, and ship. Websites, booking tools, storefronts, and custom web apps for anyone who needs software built.",
   whatsapp: "",
-  email: "hello@tilkraft.com",
+  email: "hello@coderman.studio",
   calendarUrl: "",
   cityLine:
     "Products, tools, bookings, dashboards — if you need it built, we scope it and ship it.",
