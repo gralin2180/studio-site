@@ -537,7 +537,7 @@ export default function App() {
       <header className="top">
         <a className="logo" href="#top">
           {brand.name}
-          <span className="logo-studios"> Studios</span>
+          <span className="logo-studios"> {brand.studioWord}</span>
         </a>
         <nav className="nav" aria-label="Primary">
           <a href="#packages">Packages</a>
@@ -554,7 +554,7 @@ export default function App() {
           <p className="hero-eyebrow">App &amp; web studio</p>
           <p className="brand-mark">
             {brand.name}
-            <span className="brand-studios">Studios</span>
+            <span className="brand-studios">{brand.studioWord}</span>
           </p>
           <h1>{brand.tagline}</h1>
           <p className="hero-lead">{brand.oneLiner}</p>
