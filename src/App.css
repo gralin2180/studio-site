@@ -16,7 +16,6 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.45rem;
@@ -25,36 +24,25 @@
   color: var(--ink);
 }
 
-.logo-mark,
-.hero-mark {
-  flex: 0 0 auto;
-  display: block;
-  color: var(--accent);
-}
-
-.logo-mark .pine-crown,
-.hero-mark .pine-crown {
-  fill: currentColor;
-}
-
-.logo-mark .pine-trunk,
-.hero-mark .pine-trunk {
-  fill: var(--brass);
-}
-
-.logo-mark {
-  width: 1.35rem;
-  height: 1.65rem;
-}
-
-.hero-mark {
-  width: 2.35rem;
-  height: 2.85rem;
-  margin: 0 0 0.9rem;
-}
-
 .logo-text {
   display: inline;
+}
+
+.pine-letter {
+  display: inline-block;
+  width: 0.3em;
+  height: 1.22em;
+  margin: 0 0.02em -0.18em;
+  vertical-align: baseline;
+  overflow: visible;
+}
+
+.pine-letter .pine-crown {
+  fill: var(--accent);
+}
+
+.pine-letter .pine-trunk {
+  fill: var(--brass);
 }
 
 .logo span,
