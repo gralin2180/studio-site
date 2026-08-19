@@ -1,15 +1,16 @@
 /**
- * Brand + portfolio data for Tilkraft Studios marketing site.
+ * Brand + portfolio data for Pinekraft Studio marketing site.
  */
 export const brand = {
-  name: "Tilkraft",
-  legalName: "Tilkraft Studios",
-  domain: "tilkraft.com",
+  name: "Pinekraft",
+  studioWord: "Studio",
+  legalName: "Pinekraft Studio",
+  domain: "pinekraftstudio.com",
   tagline: "We build apps and sites — fixed packages, clear price.",
   oneLiner:
     "Tell us what you need. We set the scope, quote a clear estimate, and ship. Websites, booking tools, storefronts, and custom web apps for anyone who needs software built.",
   whatsapp: "",
-  email: "hello@tilkraft.com",
+  email: "hello@pinekraftstudio.com",
   calendarUrl: "",
   cityLine:
     "Products, tools, bookings, dashboards — if you need it built, we scope it and ship it.",
