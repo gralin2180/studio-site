@@ -12,6 +12,7 @@ import {
   type WorkItem,
   type WorkShot,
 } from "./brand";
+import { PineMark, PinekraftWord } from "./PineMark";
 import "./App.css";
 
 function primaryCta(): { href: string; label: string } {
@@ -535,9 +536,12 @@ export default function App() {
   return (
     <div className="site">
       <header className="top">
-        <a className="logo" href="#top">
-          {brand.name}
-          <span className="logo-studios"> Studios</span>
+        <a className="logo" href="#top" aria-label={`${brand.name} ${brand.studioWord}`}>
+          <PineMark className="lockup-pine" />
+          <span className="logo-text" aria-hidden="true">
+            <PinekraftWord />
+            <span className="logo-studios"> {brand.studioWord}</span>
+          </span>
         </a>
         <nav className="nav" aria-label="Primary">
           <a href="#packages">Packages</a>
@@ -552,10 +556,11 @@ export default function App() {
         <section className="hero" aria-label="Introduction">
           <div className="hero-stack">
           <p className="hero-eyebrow">App &amp; web studio</p>
-          <p className="brand-mark">
-            {brand.name}
-            <span className="brand-studios">Studios</span>
-          </p>
+          <div className="brand-mark" aria-label={`${brand.name} ${brand.studioWord}`}>
+            <PineMark className="lockup-pine" />
+            <PinekraftWord className="lockup-name" />
+            <span className="brand-studios">{brand.studioWord}</span>
+          </div>
           <h1>{brand.tagline}</h1>
           <p className="hero-lead">{brand.oneLiner}</p>
           <p className="hero-what">

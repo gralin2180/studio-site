@@ -14,12 +14,27 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.4rem;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.45rem;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--ink);
+}
+
+.logo .lockup-pine {
+  width: 1.05rem;
+  height: 1.32rem;
+  flex: 0 0 auto;
+  display: block;
+}
+
+.logo-text {
+  display: inline;
+  line-height: 1;
 }
 
 .logo span,
@@ -132,6 +147,9 @@
 }
 
 .brand-mark {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.38em;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(2.65rem, 6.2vw, 3.85rem);
@@ -139,6 +157,25 @@
   letter-spacing: -0.01em;
   margin: 0 0 1.1rem;
   color: var(--ink);
+}
+
+.brand-mark .lockup-pine {
+  grid-column: 1;
+  grid-row: 1;
+  width: 0.7em;
+  height: 0.88em;
+  align-self: end;
+  margin-bottom: 0.04em;
+}
+
+.lockup-name {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.brand-mark .brand-studios {
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .brand-mark em,
