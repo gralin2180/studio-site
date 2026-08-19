@@ -1,0 +1,17 @@
+/** Geometric pine mark — forest crown, brass trunk. */
+export function PineMark({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 36 44"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path className="pine-crown" d="M18 1.4 28.6 15.2H7.4Z" />
+      <path className="pine-crown" d="M18 9.8 32 25.6H4Z" />
+      <path className="pine-crown" d="M18 19.4 35.2 38.4H.8Z" />
+      <path className="pine-trunk" d="M15.35 36.4h5.3V42.2c0 .55-.4 1-1 1h-3.3c-.6 0-1-.45-1-1z" />
+    </svg>
+  );
+}
