@@ -1,26 +1,26 @@
-/** Narrow pine used as the letter i in Pinekraft. */
-export function PineLetter({ className }: { className?: string }) {
+import { brand } from "./brand";
+
+/** Forest pine with brass trunk — scales with the wordmark. */
+export function PineMark({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 24 64"
+      viewBox="0 0 32 40"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <path fill="#183f35" d="M12 1.2 20.8 16.2H3.2Z" />
-      <path fill="#183f35" d="M12 11 22.6 28.4H1.4Z" />
-      <path fill="#183f35" d="M12 22.2 23.8 42H.2Z" />
-      <path fill="#a39168" d="M10.15 40.2h3.7V61.6c0 .9-.7 1.6-1.85 1.6s-1.85-.7-1.85-1.6z" />
+      <path
+        fill="#183f35"
+        d="M16 1.2 24.2 12.8h-4.1L26.8 22.2h-4.4L31 34.6H1L9.6 22.2H5.2L11.9 12.8H7.8Z"
+      />
+      <path
+        fill="#a39168"
+        d="M13.7 32.8h4.6V38.6c0 .7-.6 1.2-1.3 1.2h-2c-.7 0-1.3-.5-1.3-1.2z"
+      />
     </svg>
   );
 }
 
 export function PinekraftWord({ className }: { className?: string }) {
-  return (
-    <span className={className}>
-      P
-      <PineLetter className="pine-letter" />
-      nekraft
-    </span>
-  );
+  return <span className={className}>{brand.name}</span>;
 }
