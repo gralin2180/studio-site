@@ -30,19 +30,11 @@
 
 .pine-letter {
   display: inline-block;
-  width: 0.3em;
-  height: 1.22em;
-  margin: 0 0.02em -0.18em;
+  width: 0.62em;
+  height: 1.42em;
+  margin: 0 0.04em -0.22em;
   vertical-align: baseline;
   overflow: visible;
-}
-
-.pine-letter .pine-crown {
-  fill: var(--accent);
-}
-
-.pine-letter .pine-trunk {
-  fill: var(--brass);
 }
 
 .logo span,
