@@ -52,10 +52,12 @@ function ProjectGallery({
   const shots = work.shots.filter((s) => s.form === form && s.mode === mode);
   useEffect(() => {
     const previous = document.activeElement as HTMLElement | null;
-    dialog.current?.showModal();
+    const modal = dialog.current;
+    modal?.showModal();
     const overflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
+      modal?.close();
       document.body.style.overflow = overflow;
       previous?.focus();
     };
