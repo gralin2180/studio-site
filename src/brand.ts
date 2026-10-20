@@ -1,11 +1,11 @@
 /**
- * Brand + portfolio data for Pinekraft Studio marketing site.
+ * Brand + portfolio data for Simplith Studio marketing site.
  */
 export const brand = {
-  name: "Pinekraft",
+  name: "Simplith",
   studioWord: "Studio",
-  legalName: "Pinekraft Studio",
-  domain: "pinekraftstudio.com",
+  legalName: "Simplith Studio",
+  domain: "simplith.com",
   tagline: "We build apps and sites — fixed packages, clear price.",
   oneLiner:
     "Tell us what you need. We set the scope, quote a clear estimate, and ship. Websites, booking tools, storefronts, and custom web apps for anyone who needs software built.",
@@ -22,7 +22,8 @@ export const packages = [
     name: "Presence",
     price: "$199–399",
     days: "3–7 days",
-    blurb: "A sharp one-page site with a clear call to action — ready for traffic and enquiries.",
+    blurb:
+      "A sharp one-page site with a clear call to action — ready for traffic and enquiries.",
     includes: ["Landing page", "Mobile layout", "Contact / CTA", "Basic SEO"],
   },
   {
@@ -30,23 +31,36 @@ export const packages = [
     name: "Bookings",
     price: "$499–799",
     days: "7–14 days",
-    blurb: "Landing page plus booking or lead form, with email or WhatsApp notifications.",
-    includes: ["Landing + form", "Lead notify", "Calendar or waitlist", "Mobile-first"],
+    blurb:
+      "Landing page plus booking or lead form, with email or WhatsApp notifications.",
+    includes: [
+      "Landing + form",
+      "Lead notify",
+      "Calendar or waitlist",
+      "Mobile-first",
+    ],
   },
   {
     id: "ops",
     name: "Ops app",
     price: "$900–2,000",
     days: "14–28 days",
-    blurb: "A small custom web app for your workflow — catalogs, orders, staff tools, dashboards.",
-    includes: ["Custom screens", "Auth if needed", "Data backend", "Deploy help"],
+    blurb:
+      "A small custom web app for your workflow — catalogs, orders, staff tools, dashboards.",
+    includes: [
+      "Custom screens",
+      "Auth if needed",
+      "Data backend",
+      "Deploy help",
+    ],
   },
   {
     id: "care",
     name: "Care",
     price: "$200–500/mo",
     days: "Ongoing",
-    blurb: "Hosting support, small changes, uptime watch, and a feature queue after launch.",
+    blurb:
+      "Hosting support, small changes, uptime watch, and a feature queue after launch.",
     includes: ["Hosting help", "Small edits", "Uptime watch", "Priority queue"],
   },
 ] as const;
@@ -219,7 +233,8 @@ export const businessDemos: BusinessDemo[] = [
   {
     id: "gym",
     type: "Gym & fitness",
-    blurb: "Class boards, memberships, trainer booking, and front-desk check-in.",
+    blurb:
+      "Class boards, memberships, trainer booking, and front-desk check-in.",
     accent: "#c2410c",
     accentSoft: "#ffedd5",
     screens: [
@@ -230,7 +245,11 @@ export const businessDemos: BusinessDemo[] = [
         title: "Today on the floor",
         sub: "Live capacity and next sessions",
         meta: ["12 in now", "3 classes", "2 PT"],
-        rows: ["HIIT · 6:30 pm · 4 left", "Yoga flow · almost full", "Open gym until 10"],
+        rows: [
+          "HIIT · 6:30 pm · 4 left",
+          "Yoga flow · almost full",
+          "Open gym until 10",
+        ],
         cta: "Book a class",
       },
       {
@@ -239,7 +258,12 @@ export const businessDemos: BusinessDemo[] = [
         layout: "schedule",
         title: "Weekly schedule",
         sub: "Filter by coach, level, or room",
-        rows: ["Mon · Strength lab", "Wed · Spin room B", "Fri · Conditioning", "Sat · Open mat"],
+        rows: [
+          "Mon · Strength lab",
+          "Wed · Spin room B",
+          "Fri · Conditioning",
+          "Sat · Open mat",
+        ],
         cta: "Reserve spot",
       },
       {
@@ -294,7 +318,11 @@ export const businessDemos: BusinessDemo[] = [
         layout: "board",
         title: "Assignments",
         sub: "Status and deadlines",
-        rows: ["UX audit · Due Thu", "Quiz set · Submitted", "Project brief · Draft"],
+        rows: [
+          "UX audit · Due Thu",
+          "Quiz set · Submitted",
+          "Project brief · Draft",
+        ],
         cta: "Upload work",
       },
       {
@@ -303,7 +331,11 @@ export const businessDemos: BusinessDemo[] = [
         layout: "tickets",
         title: "Campus notices",
         sub: "Faculty and admin",
-        rows: ["Library hours extended", "Sports meet open", "Fee window closes Fri"],
+        rows: [
+          "Library hours extended",
+          "Sports meet open",
+          "Fee window closes Fri",
+        ],
         cta: "Mark read",
       },
     ],
@@ -376,7 +408,11 @@ export const businessDemos: BusinessDemo[] = [
         layout: "map",
         title: "Live map",
         sub: "Riders and drop pins",
-        rows: ["Sam · 2 drops · 12 min", "Nu · idle", "Warehouse heat · medium"],
+        rows: [
+          "Sam · 2 drops · 12 min",
+          "Nu · idle",
+          "Warehouse heat · medium",
+        ],
         cta: "Focus active",
       },
       {
@@ -476,7 +512,11 @@ export const businessDemos: BusinessDemo[] = [
         layout: "tickets",
         title: "Waiting room",
         sub: "Live token board",
-        rows: ["Token 14 · check-in", "Token 15 · with nurse", "Token 16 · next"],
+        rows: [
+          "Token 14 · check-in",
+          "Token 15 · with nurse",
+          "Token 16 · next",
+        ],
         cta: "Call next",
       },
       {
@@ -585,10 +625,26 @@ export const businessDemos: BusinessDemo[] = [
 ];
 
 export const steps = [
-  { n: "01", title: "Fit call", body: "15 minutes: problem, must-haves, budget, go-live." },
-  { n: "02", title: "One-screen scope", body: "In / out of scope, package, timeline — same day." },
-  { n: "03", title: "Deposit & build", body: "50% to start. Milestone demos so nothing ships blind." },
-  { n: "04", title: "Live & care", body: "You own the domain. Free-tier host or Care retainer." },
+  {
+    n: "01",
+    title: "Fit call",
+    body: "15 minutes: problem, must-haves, budget, go-live.",
+  },
+  {
+    n: "02",
+    title: "One-screen scope",
+    body: "In / out of scope, package, timeline — same day.",
+  },
+  {
+    n: "03",
+    title: "Deposit & build",
+    body: "50% to start. Milestone demos so nothing ships blind.",
+  },
+  {
+    n: "04",
+    title: "Live & care",
+    body: "You own the domain. Free-tier host or Care retainer.",
+  },
 ] as const;
 
 export function waLink(text?: string): string | null {

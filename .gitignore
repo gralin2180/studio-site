@@ -33,3 +33,6 @@ public/work/_preview-*.png
 public/work/_studio-landing.png
 nul.css
 
+
+.vercel
+.env*
