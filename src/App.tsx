@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   brand,
   packages,
@@ -8,6 +8,8 @@ import {
   type ThemeMode,
 } from "./brand";
 import "./App.css";
+import Assistant from "./Assistant";
+import { Coderman, CodermanEntrance } from "./Coderman";
 
 function Mark({ className = "" }: { className?: string }) {
   return (
@@ -17,16 +19,8 @@ function Mark({ className = "" }: { className?: string }) {
       fill="none"
       aria-hidden="true"
     >
-      <path
-        d="M64 12H32C18 12 10 20 10 32s9 20 22 20h16c7 0 10 4 10 9s-4 9-11 9H16"
-        stroke="currentColor"
-        strokeWidth="17"
-      />
-      <path
-        d="M64 10H33c-7 0-11 4-11 9s4 9 11 9h15c14 0 22 8 22 20s-8 20-22 20H16"
-        stroke="currentColor"
-        strokeWidth="4"
-      />
+      <path d="M62 18H30L14 34V62H50L64 48" stroke="currentColor" strokeWidth="12" strokeLinejoin="miter" />
+      <path d="M42 32L34 40L42 48M54 32L62 40L54 48" stroke="currentColor" strokeWidth="4" />
     </svg>
   );
 }
@@ -47,7 +41,7 @@ function ProjectGallery({
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [form, setForm] = useState<FormFactor>("web");
-  const [mode, setMode] = useState<ThemeMode>(work.defaultMode ?? "light");
+  const [mode, setMode] = useState<ThemeMode>(work.modes.includes("dark") ? "dark" : "light");
   const [index, setIndex] = useState(0);
   const shots = work.shots.filter((s) => s.form === form && s.mode === mode);
   useEffect(() => {
@@ -158,21 +152,52 @@ function ProjectGallery({
 }
 
 export default function App() {
+  const [intro, setIntro] = useState(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return false;
+    try { return sessionStorage.getItem("coderman-intro-v1") !== "seen"; } catch { return true; }
+  });
+  const replayButton = useRef<HTMLButtonElement>(null);
+  const replaying = useRef(false);
+  const finishIntro = useCallback(() => {
+    setIntro(false);
+    try { sessionStorage.setItem("coderman-intro-v1", "seen"); } catch { /* Storage is optional. */ }
+    requestAnimationFrame(() => {
+      const destination = replaying.current ? replayButton.current : document.querySelector<HTMLElement>("#main");
+      destination?.focus({ preventScroll: true });
+      replaying.current = false;
+    });
+  }, []);
+  useEffect(() => {
+    if (!intro) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const timeout = window.setTimeout(finishIntro, 3500);
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onMotion = () => { if (motion.matches) finishIntro(); };
+    motion.addEventListener("change", onMotion);
+    return () => {
+      clearTimeout(timeout);
+      document.body.style.overflow = previousOverflow;
+      motion.removeEventListener("change", onMotion);
+    };
+  }, [intro, finishIntro]);
   const [menu, setMenu] = useState(false);
   const [active, setActive] = useState<WorkItem | null>(null);
   const [service, setService] = useState("A website");
   const [brief, setBrief] = useState("");
-  const emailHref = `mailto:${brand.email}?subject=${encodeURIComponent("A new project for Simplith — " + service)}&body=${encodeURIComponent(brief)}`;
+  const emailHref = `mailto:${brand.email}?subject=${encodeURIComponent("A new project for Coderman Studios — " + service)}&body=${encodeURIComponent(brief)}`;
   const ordered = [works[1], works[2], works[0], works[3]];
   return (
-    <div className="site">
+    <>
+    {intro && <CodermanEntrance onFinish={finishIntro} />}
+    <div className="site" inert={intro}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
       <header className="site-header wrap">
-        <a className="wordmark" href="#" aria-label="Simplith home">
+        <a className="wordmark" href="#" aria-label="Coderman Studios home">
           <Mark />
-          simplith<span className="brand-dot">✳</span>
+          <span className="wordmark-text">Coderman<span>Studios</span></span>
         </a>
         <nav
           className={menu ? "navigation open" : "navigation"}
@@ -200,43 +225,44 @@ export default function App() {
           {menu ? "Close" : "Menu"}
         </button>
       </header>
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <section className="hero wrap">
           <div className="hero-top">
             <span className="eyebrow">
               <span className="status-dot" /> INDEPENDENT DIGITAL STUDIO
             </span>
-            <span className="hero-index">STRATEGY / DESIGN / DEVELOPMENT</span>
+            <span className="hero-index">DESIGN / CODE / EXPERIENCE</span>
           </div>
           <div className="hero-layout">
             <div className="hero-copy">
               <h1>
-                Big ideas.
+                Ideas into
                 <br />
-                Beautifully
+                working
                 <br />
-                <span className="orange">simple.</span>
+                <span className="accent">worlds.</span>
               </h1>
               <p>
-                We turn your next big thing into a website or app that feels
-                right. Thoughtfully designed. Built to work.
+                Websites, apps, and interactive experiences. We bring design
+                and engineering together to turn your idea into something real.
               </p>
               <a className="button dark" href="#work">
                 Explore our work <span aria-hidden="true">↘</span>
               </a>
+              <button ref={replayButton} className="cm-replay" onClick={() => {
+                if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+                replaying.current = true; setIntro(true);
+              }}><span aria-hidden="true">▷</span> Meet Coderman</button>
             </div>
             <div
               className="hero-art"
-              aria-label="Abstract sculptural Simplith S mark"
+              aria-label="Coderman levitating above a geometric field, assembling luminous code fragments"
               role="img"
             >
               <div className="art-grid" />
-              <div className="sculpture">
-                <div className="s-piece top-piece" />
-                <div className="s-piece bottom-piece" />
-              </div>
-              <span className="art-label">COMPLEXITY, RECONSIDERED.</span>
-              <span className="art-number">S—01</span>
+              <Coderman />
+              <span className="art-label">THE COMPILE FIELD</span>
+              <span className="art-number">CM—01</span>
               <span className="art-cross">+</span>
             </div>
           </div>
@@ -244,12 +270,12 @@ export default function App() {
             <p>
               A small studio.
               <br />
-              <strong>A considered approach.</strong>
+              <strong>Built with purpose.</strong>
             </p>
             <p>
-              From the first sketch to the final pixel,
+              From the first prototype to the final release,
               <br />
-              we make the complicated feel effortless.
+              we make ideas work in the real world.
             </p>
             <a href="#work" aria-label="Scroll to selected work">
               ↓
@@ -260,11 +286,11 @@ export default function App() {
           <div className="wrap">
             <span>Websites</span>
             <i>✳</i>
-            <span>Web apps</span>
+            <span>Apps & AI tools</span>
             <i>✳</i>
-            <span>Digital experiences</span>
+            <span>Unreal & XR</span>
             <i>✳</i>
-            <span>Made with intention</span>
+            <span>Virtual production</span>
             <i>✳</i>
           </div>
         </div>
@@ -311,7 +337,7 @@ export default function App() {
                         w.shots.find(
                           (s) =>
                             s.form === "web" &&
-                            s.mode === (w.defaultMode ?? "light"),
+                            s.mode === (w.modes.includes("dark") ? "dark" : "light"),
                         )!.src
                       }
                       alt={w.name + " website preview"}
@@ -352,7 +378,7 @@ export default function App() {
               <p>
                 One partner from idea to launch.
                 <br />
-                Clear scope, fixed packages, no guesswork.
+                Web packages below. Interactive projects scoped individually.
               </p>
             </div>
             <div className="services-list">
@@ -399,6 +425,21 @@ export default function App() {
                 </article>
               ))}
             </div>
+            <div className="interactive-services">
+              <span className="eyebrow">BEYOND THE BROWSER</span>
+              <div className="interactive-grid">
+                {[
+                  ["Unreal & multiplayer", "Gameplay systems, interactive prototypes, and multiplayer experiences."],
+                  ["XR & virtual production", "VR, MR, and real-time worlds built for interaction and storytelling."],
+                  ["AI workflow tools", "Purpose-built tools that connect your data, models, and everyday workflows."],
+                ].map(([title, description]) => (
+                  <article key={title}>
+                    <h3>{title}</h3><p>{description}</p>
+                    <a href="#contact" onClick={() => setService(title)}>Discuss your project <Arrow /></a>
+                  </article>
+                ))}
+              </div>
+            </div>
             <p className="pricing-note">
               Prices in USD. Final scope and estimate agreed before we start.
             </p>
@@ -407,9 +448,9 @@ export default function App() {
         <section className="approach-section wrap section" id="approach">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">03 / THE SIMPLITH WAY</span>
+              <span className="eyebrow">03 / THE CODERMAN APPROACH</span>
               <h2>
-                Simple doesn't
+                Good work doesn't
                 <br />
                 happen by accident.
               </h2>
@@ -483,6 +524,9 @@ export default function App() {
                   "A booking platform",
                   "A custom app",
                   "Ongoing support",
+                  "Unreal & multiplayer",
+                  "XR & virtual production",
+                  "AI workflow tools",
                   "Something else",
                 ].map((s) => (
                   <option key={s}>{s}</option>
@@ -508,13 +552,16 @@ export default function App() {
       <footer className="wrap footer">
         <a className="wordmark" href="#">
           <Mark />
-          simplith<span className="brand-dot">✳</span>
+          <span className="wordmark-text">Coderman<span>Studios</span></span>
         </a>
-        <p>Thoughtfully made. Simply Simplith.</p>
-        <span>© {new Date().getFullYear()} Simplith Studio</span>
+        <p>Design with intent. Build with precision.</p>
+        <span>© {new Date().getFullYear()} {brand.legalName}</span>
         <a href="#">Back to top ↑</a>
       </footer>
+      {!intro && <Assistant />}
       {active && <ProjectGallery work={active} close={() => setActive(null)} />}
     </div>
+    </>
   );
 }
+

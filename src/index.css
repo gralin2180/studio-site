@@ -1,7 +1,7 @@
 :root {
-  font-family: "Manrope", Arial, sans-serif;
-  color: #24241f;
-  background: #f7f7f0;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  color: #20232b;
+  background: #f7f8fa;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -50,11 +50,11 @@ button:focus-visible,
 a:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #bd3914;
+  outline: 3px solid #2355e8;
   outline-offset: 5px;
 }
 ::selection {
-  background: #ff5b2d;
+  background: #2355e8;
   color: #fff;
 }
 button {

@@ -1,12 +1,12 @@
 /**
- * Brand + portfolio data for Simplith Studio marketing site.
+ * Brand + portfolio data for Coderman Studios marketing site.
  */
 export const brand = {
-  name: "Simplith",
-  studioWord: "Studio",
-  legalName: "Simplith Studio",
-  domain: "simplith.com",
-  tagline: "We build apps and sites — fixed packages, clear price.",
+  name: "Coderman",
+  studioWord: "Studios",
+  legalName: "Coderman Studios",
+  domain: "codermanstudios.com",
+  tagline: "Interactive experiences and digital products.",
   oneLiner:
     "Tell us what you need. We set the scope, quote a clear estimate, and ship. Websites, booking tools, storefronts, and custom web apps for anyone who needs software built.",
   whatsapp: "",
