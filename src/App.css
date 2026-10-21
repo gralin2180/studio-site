@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   height: 108px;
-  border-bottom: 1px solid #d9d9d0;
+  border-bottom: 1px solid #d5dae4;
 }
 .wordmark {
   display: flex;
@@ -35,7 +35,7 @@
 }
 .navigation a:hover,
 .header-cta:hover {
-  color: #d5461e;
+  color: #2355e8;
 }
 .header-cta {
   font-size: 14px;
@@ -72,7 +72,7 @@
 .status-dot {
   width: 6px;
   height: 6px;
-  background: #f5572c;
+  background: #477bff;
   border-radius: 50%;
   display: inline-block;
   margin-right: 9px;
@@ -94,8 +94,8 @@
   letter-spacing: -7px;
   font-weight: 600;
 }
-.orange {
-  color: #ed542d;
+.accent {
+  color: #2355e8;
 }
 .hero-copy > p {
   font-size: 16px;
@@ -124,11 +124,11 @@
   font-size: 19px;
 }
 .dark {
-  background: #252620;
+  background: #20232b;
   color: #fff;
 }
 .dark:hover {
-  background: #44463b;
+  background: #34415a;
 }
 .hero-art {
   aspect-ratio: 1;
@@ -143,62 +143,10 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(#24241f09 1px, transparent 1px),
-    linear-gradient(90deg, #24241f09 1px, transparent 1px);
+    linear-gradient(#20232b09 1px, transparent 1px),
+    linear-gradient(90deg, #20232b09 1px, transparent 1px);
   background-size: 47px 47px;
   mask-image: linear-gradient(transparent, #000);
-}
-.sculpture {
-  width: 67%;
-  height: 70%;
-  position: relative;
-  transform: rotate(-16deg);
-  filter: drop-shadow(20px 30px 16px #6e3a1a24);
-  animation: arrive 1.2s ease both;
-}
-.s-piece {
-  position: absolute;
-  width: 100%;
-  height: 58%;
-  background: linear-gradient(
-    135deg,
-    #ff9472 0%,
-    #ff612f 32%,
-    #f55021 65%,
-    #c94012 100%
-  );
-  border: 1px solid #ef652f;
-  box-shadow:
-    inset 2px 3px 2px #ffc3a5,
-    inset -9px -12px 15px #ad36082e;
-}
-.top-piece {
-  top: 0;
-  border-radius: 120px 10px 10px 120px;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 37%,
-    42% 37%,
-    42% 65%,
-    100% 65%,
-    100% 100%,
-    0 100%
-  );
-}
-.bottom-piece {
-  bottom: 0;
-  border-radius: 10px 120px 120px 10px;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 100%,
-    0 63%,
-    58% 63%,
-    58% 35%,
-    0 35%
-  );
 }
 .art-label {
   position: absolute;
@@ -220,7 +168,7 @@
   color: #79796d;
 }
 .hero-bottom {
-  border-top: 1px solid #d9d9d0;
+  border-top: 1px solid #d5dae4;
   padding: 25px 0 34px;
   font-size: 14px;
   color: #77776e;
@@ -238,8 +186,8 @@
   color: #38392f;
 }
 .capability-strip {
-  background: #eaece0;
-  border-block: 1px solid #d9ddcc;
+  background: #e7ebf3;
+  border-block: 1px solid #d5dae4;
   padding: 22px 0;
 }
 .capability-strip > .wrap {
@@ -275,7 +223,7 @@
 }
 .section-heading h2 em {
   font-style: normal;
-  color: #898d7a;
+  color: #2355e8;
 }
 .section-heading > p {
   font-size: 14px;
@@ -364,7 +312,7 @@
   bottom: 20px;
   width: 40px;
   height: 40px;
-  background: #f7f7f0;
+  background: #f7f8fa;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -384,7 +332,7 @@
 }
 .project-meta p {
   font-size: 14px;
-  color: #707167;
+  color: #535d70;
   margin-top: 4px;
 }
 .project-meta button {
@@ -392,20 +340,20 @@
   font-size: 25px;
 }
 .services-section {
-  background: #eeefe6;
+  background: #edf0f5;
 }
 .services-list > article {
   display: grid;
   grid-template-columns: 60px 1fr 180px;
   gap: 25px;
   padding: 33px 0;
-  border-top: 1px solid #d1d4c6;
+  border-top: 1px solid #d5dae4;
 }
 .service-number {
   font:
     11px "IBM Plex Mono",
     monospace;
-  color: #888d7b;
+  color: #5f6b80;
   padding-top: 9px;
 }
 .services-list h3 {
@@ -415,7 +363,7 @@
 }
 .services-list p {
   font-size: 14px;
-  color: #727568;
+  color: #535d70;
   margin-top: 10px;
   max-width: 590px;
 }
@@ -426,11 +374,11 @@
   margin-top: 18px;
 }
 .service-tags span {
-  border: 1px solid #d6d9ca;
+  border: 1px solid #cbd3e1;
   border-radius: 20px;
   padding: 4px 10px;
   font-size: 14px;
-  color: #5e6353;
+  color: #46536b;
 }
 .service-price {
   text-align: right;
@@ -438,11 +386,11 @@
   flex-direction: column;
   align-items: flex-end;
   font-size: 14px;
-  color: #707468;
+  color: #535d70;
   gap: 6px;
 }
 .service-price strong {
-  color: #34382a;
+  color: #20232b;
   font-size: 21px;
   font-weight: 500;
   letter-spacing: -0.7px;
@@ -450,8 +398,8 @@
 .service-price a {
   margin-top: 18px;
   font-size: 14px;
-  color: #32382a;
-  border-bottom: 1px solid #989f87;
+  color: #20232b;
+  border-bottom: 1px solid #99a7c0;
   padding-bottom: 4px;
 }
 .service-price a span {
@@ -459,8 +407,8 @@
 }
 .pricing-note {
   font-size: 14px;
-  color: #767b6b;
-  border-top: 1px solid #d1d4c6;
+  color: #535d70;
+  border-top: 1px solid #d5dae4;
   padding-top: 20px;
 }
 .process-grid {
@@ -475,9 +423,9 @@
   font:
     11px "IBM Plex Mono",
     monospace;
-  border-bottom: 1px solid #d6d6cc;
+  border-bottom: 1px solid #d5dae4;
   padding-bottom: 18px;
-  color: #828779;
+  color: #5f6b80;
 }
 .process-grid b {
   font-size: 17px;
@@ -492,10 +440,10 @@
 .process-grid p {
   font-size: 14px;
   line-height: 1.85;
-  color: #73746a;
+  color: #535d70;
 }
 .contact-section {
-  background: #f4663e;
+  background: #2355e8;
   padding: 75px 0 80px;
 }
 .contact-layout {
@@ -590,9 +538,9 @@
   border-radius: 10px;
   width: min(1050px, 94vw);
   max-height: 92dvh;
-  background: #f7f7f0;
+  background: #f7f8fa;
   padding: 0;
-  color: #24241f;
+  color: #20232b;
 }
 .gallery::backdrop {
   background: #191d19bf;
@@ -612,7 +560,7 @@
 }
 .circle-button {
   border-radius: 50%;
-  background: #e7e9df;
+  background: #e1e7f0;
   width: 40px;
   height: 40px;
   font-size: 28px;
@@ -629,18 +577,18 @@
 }
 .gallery-options button {
   padding: 7px 12px;
-  background: #e8eade;
+  background: #e1e7f0;
   text-transform: capitalize;
   border-radius: 4px;
   font-size: 14px;
 }
 .gallery-options button[aria-pressed="true"] {
-  background: #292e24;
+  background: #20232b;
   color: white;
 }
 .gallery-image {
   height: 52dvh;
-  background: #e4e6db;
+  background: #e1e7f0;
   border-radius: 5px;
   overflow: auto;
   display: flex;
@@ -664,31 +612,21 @@
 }
 .gallery-navigation button {
   font-size: 20px;
-  background: #e8eade;
+  background: #e1e7f0;
   padding: 6px 20px;
   border-radius: 4px;
 }
 .gallery-navigation small {
   margin-left: 15px;
-  color: #73776a;
+  color: #535d70;
 }
 .gallery-inner > p {
   font-size: 14px;
-  color: #6a7061;
+  color: #535d70;
   margin: 15px 0;
 }
 .gallery .button {
   padding: 12px 18px;
-}
-@keyframes arrive {
-  from {
-    opacity: 0;
-    transform: translateY(25px) rotate(-8deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotate(-16deg);
-  }
 }
 @media (min-width: 1600px) {
   .hero h1 {
@@ -779,12 +717,12 @@
     top: 75px;
     left: 0;
     right: 0;
-    background: #f7f7f0;
+    background: #f7f8fa;
     padding: 25px;
     z-index: 5;
     box-shadow: 0 12px 20px #0001;
     flex-direction: column;
-    border: 1px solid #d9d9d0;
+    border: 1px solid #d5dae4;
   }
   .hero {
     padding-top: 25px;
@@ -1007,7 +945,7 @@
 .footer p,
 .footer > span,
 .footer > a:last-child {
-  color: #5c6255;
+  color: #535d70;
 }
 .gallery-options button {
   min-height: 44px;
@@ -1066,3 +1004,64 @@
     letter-spacing: 0;
   }
 }
+
+/* Coderman Studios: graphite, electric blue, and an architectural C. */
+.wordmark { gap: 12px; letter-spacing: -1.2px; font-size: 29px; }
+.wordmark svg { width: 38px; height: 42px; flex-shrink: 0; }
+.wordmark-text { display: flex; flex-direction: column; line-height: 1; }
+.wordmark-text > span { font: 500 11px/1.4 "IBM Plex Mono", monospace; letter-spacing: 4px; text-transform: uppercase; margin-top: 6px; }
+.site-header.wrap, .hero.wrap { width: 100%; padding-inline: max(50px, calc((100% - 1320px) / 2)); background: #11151e; color: #f3f5fa; }
+.site-header { border-color: #303746; }
+.site-header .wordmark svg { color: #6c96ff; }
+.site-header a:hover { color: #95b3ff; }
+.hero-index, .hero-bottom, .hero-copy > p { color: #aeb8cb; }
+.hero h1 { font-weight: 600; font-size: clamp(62px, 7.3vw, 108px); letter-spacing: -5px; line-height: 1.02; }
+.hero .accent { color: #719bff; }
+.hero .dark { background: #3568f5; color: white; }
+.hero .dark:hover { background: #477aff; }
+.hero-bottom { border-color: #303746; }
+.hero-bottom strong, .hero-bottom > a { color: #f3f5fa; }
+.hero-art { background: radial-gradient(ellipse at 55% 44%, #243c72 0%, #151e30 52%, #111722 100%); border: 1px solid #303c54; border-radius: 4px; aspect-ratio: 1; }
+.art-grid { background-image: linear-gradient(#7fa4ff12 1px, transparent 1px), linear-gradient(90deg, #7fa4ff12 1px, transparent 1px); mask-image: none; }
+.coderman-emblem { width: 72%; transform: perspective(700px) rotateY(-18deg) rotateZ(-8deg); color: #5688ff; filter: drop-shadow(8px 10px 0 #1c45a1) drop-shadow(24px 30px 20px #0007); }
+.coderman-emblem svg { display: block; width: 100%; }
+.art-label, .art-number { color: #b5c6e6; font-size: 12px; }
+.art-cross { top: 24px; color: #719bff; }
+.capability-strip > .wrap { gap: 18px; flex-wrap: wrap; }
+.capability-strip i { color: #2355e8; }
+.interactive-services { margin-top: 48px; padding: 32px 0; border-top: 1px solid #cbd3e1; }
+.interactive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 25px; }
+.interactive-grid h3 { font-size: 23px; letter-spacing: -.7px; }
+.interactive-grid p { font-size: 16px; color: #535d70; margin-top: 12px; }
+.interactive-grid a { display: inline-flex; gap: 15px; margin-top: 22px; color: #2349af; border-bottom: 1px solid #9aaedc; padding-bottom: 5px; }
+.contact-section { color: white; }
+.contact-section h2 em { color: #c9d8ff; }
+.contact-section select, .contact-section textarea { color: white; border-color: #ffffff70; }
+.contact-section select option { color: #20232b; background: #fff; }
+.contact-section textarea::placeholder { color: #d2deff; }
+.contact-section .dark { color: #17223c; background: white; }
+.contact-section .dark:hover { background: #dce7ff; }
+.contact-section :focus-visible { outline-color: #fff; }
+@media (max-width: 1000px) {
+  .site-header.wrap, .hero.wrap { padding-inline: 28px; }
+  .navigation { gap: 18px; }
+  .header-cta { gap: 15px; }
+  .hero h1 { font-size: clamp(62px, 8vw, 84px); letter-spacing: -3px; }
+}
+@media (max-width: 700px) {
+  .site-header.wrap, .hero.wrap { padding-inline: 20px; }
+  .wordmark { font-size: 25px; gap: 8px; }
+  .wordmark svg { width: 30px; }
+  .header-cta { display: none; }
+  .navigation.open { background: #1b2332; border-color: #39465e; top: 81px; }
+  .hero h1 { font-size: clamp(58px, 13vw, 88px); letter-spacing: -3px; }
+  .hero-art { border-radius: 4px; aspect-ratio: 1.1; }
+  .interactive-grid { grid-template-columns: 1fr; gap: 32px; }
+  .capability-strip span:last-of-type { display: inline; }
+  .capability-strip i { display: none; }
+  .capability-strip > .wrap { justify-content: flex-start; column-gap: 22px; }
+  .art-label, .art-number { font-size: 11px; }
+}
+/* Coderman / after-hours studio */
+:root{color-scheme:dark;color:#e5edf3;background:#090e14}
+.site{background:#090e14}.site-header.wrap,.hero.wrap{background:#090e14}.hero{position:relative}.hero-art{border-radius:120px 12px 120px 12px;background:radial-gradient(ellipse at 55% 45%,#18423f 0%,#102125 42%,#0b141c 75%);border-color:#315255}.hero .accent,.section-heading h2 em,.capability-strip i,.contact-section h2 em{color:#8ae5ce}.hero .dark,.contact-section .dark{background:#8ae5ce;color:#0c231e}.hero .dark:hover,.contact-section .dark:hover{background:#b1f3e2}.eyebrow{color:#8fa8b7}.hero h1{letter-spacing:-5px}.hero-top .eyebrow{color:#9cdfce}.status-dot{background:#8ae5ce;box-shadow:0 0 12px #8ae5ce80}.capability-strip{background:#0e191f;border-color:#26353e;color:#c2d6dd}.capability-strip i{font-size:20px}.section-heading>p,.services-list p,.process-grid p,.pricing-note,.project-meta p,.footer p,.footer>span,.footer>a:last-child,.interactive-grid p{color:#a4b7c4}.services-section{background:#0d151e;border-block:1px solid #24333d}.project-preview,.project-loom .project-preview,.project-acumen .project-preview,.project-forma .project-preview{background:linear-gradient(145deg,#192d32,#101820);border:1px solid #30434c;border-radius:14px}.project-loom .project-preview{background:linear-gradient(145deg,#302a24,#141a20)}.project-acumen .project-preview{background:linear-gradient(145deg,#18352c,#101b20)}.project-forma .project-preview{background:linear-gradient(145deg,#28283c,#131921)}.preview-top{color:#b6c8d1}.browser-frame{border-color:#34444d;background:#111a21;box-shadow:0 20px 40px #0005}.browser-bar{background:#15222b}.browser-bar span{color:#aabfc8}.project-open{background:#173b36;color:#a5f0da;border:1px solid #568579}.project-meta button{color:#8ae5ce}.service-tags span{border-color:#3a4a55;color:#b5c7d0}.service-price{color:#9ab1c0}.service-price strong,.service-price a{color:#e3eee9}.services-list>article,.pricing-note,.interactive-services,.process-grid article>span{border-color:#2c3c47}.service-number,.process-grid article>span{color:#8ae5ce}.interactive-grid a{color:#91dfcf;border-color:#54756e}.contact-section{background:radial-gradient(ellipse at 10% 100%,#173d36,transparent 65%),#101e25;border-block:1px solid #38544f}.contact-section p{color:#b8cbd0}.contact-section select,.contact-section textarea{background:#0d1a21;border:1px solid #49616a;border-radius:5px;padding:12px;color:#e5efef}.contact-section select option{color:#e5efef;background:#0d1a21}.contact-section textarea::placeholder{color:#90a8b2}.contact-section form small{color:#a2bdc3}.footer{padding-bottom:130px}.gallery{background:#101a23;color:#e7edf3;border:1px solid #354c59}.gallery-inner,.gallery-image{background:#101a23}.circle-button,.gallery-navigation button{background:#253743;color:#e7f5fa}.gallery-options button{color:#c2d3de;background:#1b2a36}.gallery-options button[aria-pressed=true]{background:#8ae5ce;color:#112921}.gallery-inner>p,.gallery-navigation small{color:#b0c4cf}.navigation a:hover,.header-cta:hover{color:#8ae5ce}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline-color:#8ae5ce}::selection{background:#4e9b89;color:#fff}@media(max-width:760px){.navigation{background:#101b24!important;color:#e5edf3}.hero h1{letter-spacing:-3px}.hero-art{border-radius:80px 8px 80px 8px}}

@@ -1,0 +1,8 @@
+import { chromium } from 'playwright';
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:5174/');await page.evaluate(()=>document.fonts.ready);
+for(const width of [1440,768,390,320]) {await page.setViewportSize({width,height:1000}); await page.screenshot({path:`naming/coderman-${width}.png`,fullPage:true}); console.log(JSON.stringify({width,overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),title:await page.title()}));}
+await page.setViewportSize({width:1440,height:1000});await page.getByRole('button',{name:'Explore Plethora',exact:true}).click();await page.getByRole('button',{name:'Mobile',exact:true}).click();await page.getByRole('button',{name:'dark',exact:true}).click();await page.getByRole('button',{name:'Next screenshot'}).click();await page.keyboard.press('Escape');
+await page.getByRole('link',{name:'Discuss your project'}).first().click();console.log('Selected service:',await page.locator('#service').inputValue());
+await page.setViewportSize({width:390,height:844});await page.getByRole('button',{name:'Toggle navigation'}).click();await page.getByRole('link',{name:'What we do',exact:true}).click();console.log('Menu collapsed:',await page.getByRole('button',{name:'Toggle navigation'}).getAttribute('aria-expanded'));console.log('Runtime errors:',errors);console.log('Broken images:',await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>i.complete&&!i.naturalWidth).length));await browser.close();
