@@ -56,3 +56,20 @@
 .cm-intro + .site .hero-art { animation-delay: 2.8s; }
 @keyframes cm-materialize { from { opacity: 0; transform: translateY(14px); filter: blur(5px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
 @media (prefers-reduced-motion: reduce) { .cm-replay { display: none; } }
+
+/* Rendered Coderman: graphite armor, weightless posture, palm-projected toolkit. */
+.cm-render-float{position:absolute;inset:0;animation:cm-render-hover 5s ease-in-out infinite;will-change:transform}
+.cm-render-image{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 16px #6adfcd18);user-select:none}
+.cm-toolkit{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cm-tool{animation:cm-tool-float 4s ease-in-out infinite;animation-delay:var(--tool-delay);filter:drop-shadow(0 3px 8px #0008)}
+.cm-hand-projections{filter:drop-shadow(0 0 4px #6dffdb)}
+.cm-hover-ring{position:absolute;bottom:0;left:33%;width:34%;height:4%;border:1px solid #8be6d65c;border-radius:50%;box-shadow:0 0 20px #72e3c820;transform:rotate(-8deg)}
+.cm-rendered .cm-ground{bottom:0;background:#5ce4c7;opacity:.18}.cm-rendered .cm-orbit{opacity:.35}
+.hero-art .cm-rendered{width:96%;height:90%}.hero-art{overflow:hidden}
+.cm-launcher .cm-render-float{inset:-8px -12px 5px}.cm-launcher .cm-render-image{filter:drop-shadow(0 0 7px #6affdc45)}
+.cm-launcher .cm-toolkit{opacity:.85}.cm-launcher .cm-tool text{display:none}.cm-launcher .cm-tool rect:first-child{fill-opacity:.3}.cm-launcher .cm-tool rect:nth-child(3){fill-opacity:.6}.cm-launcher .cm-orbit{display:none}
+.is-entrance .cm-tool{animation:cm-tool-arrive .6s 1s both}.is-entrance .cm-render-float{animation:cm-render-hover 5s ease-in-out infinite}
+@keyframes cm-render-hover{0%,100%{transform:translateY(-3px) rotate(-1deg)}50%{transform:translateY(-15px) rotate(1deg)}}
+@keyframes cm-tool-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes cm-tool-arrive{from{opacity:0;transform:translateY(18px) scale(.8)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.cm-render-float,.cm-tool{animation:none!important;will-change:auto}}

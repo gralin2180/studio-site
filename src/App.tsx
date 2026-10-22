@@ -256,7 +256,7 @@ export default function App() {
             </div>
             <div
               className="hero-art"
-              aria-label="Coderman levitating above a geometric field, assembling luminous code fragments"
+              aria-label="Coderman in sleek graphite armor, levitating with holographic Node.js, Flutter, React, Unreal Engine, Unity and Blender tools above his hands"
               role="img"
             >
               <div className="art-grid" />
@@ -564,4 +564,5 @@ export default function App() {
     </>
   );
 }
+
 
